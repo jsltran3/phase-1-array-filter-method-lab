@@ -7,10 +7,10 @@ function findMatching(arr, driver) {
   }; 
 
   function fuzzyMatch(arr, letter) {
-    let approx = arr.filter(function (letter) {
-      if (arr.includes(letter) === true) {
-        return approx
-      }
-    })
-    // let specificDrivers = arr.filter(approx => approx.toLowerCase())
-    };
+    let beginLetter = arr.filter(driver => driver.toLowerCase().startsWith(letter.toLowerCase()) === true );
+    return beginLetter 
+  }; 
+
+function matchName(arr, name){
+    return arr.filter(driver => driver.name === name)
+}
